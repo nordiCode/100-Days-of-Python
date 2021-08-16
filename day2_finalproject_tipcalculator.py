@@ -1,7 +1,16 @@
+print("******************************")
 print("Welcome to the tip calculator.")
 
 total_bill = input("What was the total bill? ")
 tip_amount = input("How much would you like to tip? 10, 12, 15 or 18? ")
+
+
+#some bounds on tipping 
+if(int(tip_amount)<0):
+    print("Come on you have to tip something")
+elif(int(tip_amount)>100):
+    print("That is more than the bill itself!")
+
 ppl_splitting = input("How many people are you splitting the bill with? ")
 
 tip = float(tip_amount) / 100
